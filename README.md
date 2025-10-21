@@ -31,7 +31,7 @@ ip6tables -A OUTPUT -t mangle -j CONNMARK --restore-mark --mask 1
 
 # any ipv4 connections (e.g. upnp) initiated to the lan from pppaa must go back out over pppaa
 iptables -A PREROUTING -t mangle -i pppaa -j CONNMARK --set-mark 1
-iptables -A PREROUTING -t mangle -i `your LAN interface e.g. eth1` -m mark --mark 0 -j CONNMARK --restore-mark
+iptables -A PREROUTING -t mangle -i eth1 -m mark --mark 0 -j CONNMARK --restore-mark
 
 exit 0
 ```
