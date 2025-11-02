@@ -80,8 +80,6 @@ set container name l2tpclient device ppp source /dev/ppp
 set container name l2tpclient device ppp destination /dev/ppp
 set container name l2tpclient volume modules source /lib/modules
 set container name l2tpclient volume modules destination /lib/modules
-set container name l2tpclient volume l2tpclient source /config/l2tpclient
-set container name l2tpclient volume l2tpclient destination /config/l2tpclient
 set container name l2tpclient volume pppaa-ifup source /config/scripts/pppaa-up.sh
 set container name l2tpclient volume pppaa-ifup destination /sbin/pppaa-up.sh
 set container name l2tpclient volume pppaa-ifdown source /config/scripts/pppaa-down.sh
